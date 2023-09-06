@@ -7,13 +7,15 @@ public abstract class Post {
     private ArrayList<Comentario> listaComentarios = new ArrayList<>();
     private String tipo;
     private String titulo;
+    private Usuario propietario;
 
 
-    public Post(Date fechaCreacion, ArrayList<Comentario> listaComentarios, String tipo, String titulo) {
+    public Post(Date fechaCreacion, ArrayList<Comentario> listaComentarios, String tipo, String titulo, Usuario propietario) {
         this.fechaCreacion = fechaCreacion;
         this.listaComentarios = listaComentarios;
         this.tipo = tipo;
         this.titulo = titulo;
+        this.propietario = propietario;
     }
 
 
@@ -47,5 +49,13 @@ public abstract class Post {
 
     public void setTitulo(String titulo) {
         this.titulo = titulo;
+    }
+
+    public Usuario getPropietario() {
+        return propietario;
+    }
+
+    public void setPropietario(Usuario propietario) {
+        this.propietario = propietario;
     }
 }
